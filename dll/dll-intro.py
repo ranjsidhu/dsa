@@ -104,5 +104,13 @@ class DoublyLinkedList:
 
             return temp
 
+    def set_value(self, index, value):
+        node = self.get_by_binary_search(index)
+        if node:
+            node.value = value
+            return True
+
+        return False
+
 
 dll = DoublyLinkedList(11)
