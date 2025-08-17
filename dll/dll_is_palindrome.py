@@ -9,7 +9,7 @@ dll_list.print_list()
 
 
 def is_palindrome(dll):
-    if dll.length == 0 or dll.length == 1:
+    if dll.length <= 1:
         return True
 
     forward = dll.head
