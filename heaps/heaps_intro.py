@@ -18,7 +18,7 @@ class MaxHeap:
         self.heap[index1], self.heap[index2] = (
             self.heap[index2],
             self.heap[index1],
-        )  # noqa
+        )
 
     def _sink_down(self, index: int = None):
         max_index = index
