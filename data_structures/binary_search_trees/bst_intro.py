@@ -32,6 +32,16 @@ class BinarySearchTree:
                     return True
                 temp = temp.right
 
+    def initialise_tree(self):
+        self.insert(47)
+        self.insert(21)
+        self.insert(76)
+        self.insert(18)
+        self.insert(27)
+        self.insert(52)
+        self.insert(82)
+        self.print_tree()
+
     def contains(self, value):
         current = self.root
         while current is not None:
@@ -79,15 +89,14 @@ class BinarySearchTree:
 
         return results
 
+    def dfs_preorder(self):
+        current_node = self.root
+        results = []
+
+        return None
+
 
 bst = BinarySearchTree()
-bst.insert(47)
-bst.insert(21)
-bst.insert(76)
-bst.insert(18)
-bst.insert(27)
-bst.insert(52)
-bst.insert(82)
-bst.print_tree()
+bst.initialise_tree()
 print("----------- Result -----------")
 print(bst.bfs())
