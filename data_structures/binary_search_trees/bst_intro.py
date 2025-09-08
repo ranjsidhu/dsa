@@ -62,6 +62,23 @@ class BinarySearchTree:
             new_prefix = prefix + ("    " if is_left else "│   ")
             self.print_tree(node.left, new_prefix, True)
 
+    def bfs(self):
+        current_node = self.root
+        queue = []
+        results = []
+        queue.append(current_node)
+
+        while len(queue) > 0:
+            current_node = queue.pop(0)
+            results.append(current_node.value)
+
+            if current_node.left is not None:
+                queue.append(current_node.left)
+            if current_node.right is not None:
+                queue.append(current_node.right)
+
+        return results
+
 
 bst = BinarySearchTree()
 bst.insert(47)
@@ -73,4 +90,4 @@ bst.insert(52)
 bst.insert(82)
 bst.print_tree()
 print("----------- Result -----------")
-print(bst.contains(17))
+print(bst.bfs())
